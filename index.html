@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>A Long Talk</title>
+  <link href="styl.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Vollkorn:700italic,400' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <header>
+    <a href="https://nlaieke.github.io/" class="logo">
+      <div id= "logo-pic">
+      <img src="https://i.imgur.com/C5p1Jrl.png" width="200" height="60" />
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="https://nlaieke.github.io/about.html">About</a></li>
+        <li><a href="https://nlaieke.github.io/members.html">Members</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <script type="text/javascript">
+      function changeText() {
+        var par = document.getElementById('agreetext');
+        var p1 = "Mindful of the continuing confliction of personal, instituional, and structural racism, and of the daily realities of all forms of prejudice and bigotry in my own life and in the lives of my family, friends, co-wokers, and the society in which I live, it is with conviction and hope that I take this pledge. \n \n I am fully aware that the struggle to elminate racism will not end with a mere plegde, but this effort needs an anti-racist mindset that calls for ongoing transformation within myself, within my community, and within the instituions and structures within our society."
+        var p2 = "Therefore: \n \n I pledge to educate myself on racial justice issues and all other forms of human oppression and to share what I learn in my own communities, even if it means challenging conversations with those I encounter.";
+        var p3 = "I pledge to seek out information and opportunities to understand how I and others have been affected by racism and to expand my consciousness to be more aware and sensitive to the use of overt and subtle expressions of racism and racial stereotypes.";
+        var p4 = "I pledge to display courage in the presence of racial injustice, to call out racism where and when it occurs, and to facilitate open and compassionate conversations that will contribute to understanding the effects racism has on all people.";
+        var p5 = "I pledge to support public policy solutions that will prominently, openly, and enthusiastically promote racial equity in all aspects of human affairs and to work to eradicate racism from our society.*" 
+        var p6 = "Thank you.\n \n" + "To begin this commitment, navigate to the 'Members' tab at the top of the page."
+
+        
+        if (par.innerText.includes("Mindful")) {
+          //alert('p1');
+          par.innerText = p2;
+        }
+        else if (par.innerText.includes("I pledge to educate myself on racial justice issues")) {
+          //alert('p2');
+          par.innerText = p3;
+        } else if(par.innerText.includes("I pledge to seek out information and opportunities")){
+           //alert('p3');
+          par.innerText = p4;
+        } else if(par.innerText.includes("I pledge to display courage in the presence of racial injustice,")){
+          //alert('p4');
+          par.innerText = p5;
+        }
+         else { //placeholder--can delete this, do nothing, or change text after going through all paragraphs
+          document.getElementById("agree").style.display = "none"; 
+          par.innerHTML = p6;
+        }
+      }
+    </script>
+
+    <h1><em>American Anti-Racism Alliance Pledge</em></h1>
+    <p id="agreetext"> Mindful of the continuing affliction of personal, institutional, and structural racism, and of the daily realities of all forms of prejudice and bigotry in my own life and in the lives of my family, friends, co-workers, and the society in which I live, it is with conviction and hope that I take this pledge. <br><br>
+
+    I am fully aware that the struggle to eliminate racism will not end with a mere pledge, but this effort needs an anti-racism mindset that calls for an ongoing transformation within myself, within my community, and within the institutions and structures of our society.
+
+    </p>
+    <input type="button" id="agree" value="I AGREE" onclick="changeText()">
+      <div class="footer">*This pledge has been adapted by the AARA from the <b><u><a href="https://civilityandrespect.org/anti-racism-pledge"> BCCR Anti-Racism Pledge.</a></u></b></div>
+  </section>
+</body>
+</html>
